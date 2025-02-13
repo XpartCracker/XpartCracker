@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #121212;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 90%;
+            width: 400px;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+        h1 {
+            font-size: 60px;
+            color: #ff4757;
+        }
+        p {
+            font-size: 16px;
+            margin: 10px 0 20px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: #ff4757;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: #e84118;
+        }
+        .game {
+            margin-top: 20px;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            width: 100%;
+            max-width: 240px;
+            margin: 20px auto;
+        }
+        .cell {
+            width: 80px;
+            height: 80px;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            cursor: pointer;
+            border: 2px solid #ff4757;
+        }
+        .cell:hover {
+            background: #444;
+        }
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 50px;
+            }
+            .cell {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! The page you are looking for does not exist.</p>
+        <a href="index.html">Go Back Home</a>
+        <div class="game">
+            <p>Play Tic-Tac-Toe while you're here:</p>
+            <div class="board" id="board">
+                <div class="cell" onclick="makeMove(0)"></div>
+                <div class="cell" onclick="makeMove(1)"></div>
+                <div class="cell" onclick="makeMove(2)"></div>
+                <div class="cell" onclick="makeMove(3)"></div>
+                <div class="cell" onclick="makeMove(4)"></div>
+                <div class="cell" onclick="makeMove(5)"></div>
+                <div class="cell" onclick="makeMove(6)"></div>
+                <div class="cell" onclick="makeMove(7)"></div>
+                <div class="cell" onclick="makeMove(8)"></div>
+            </div>
+            <p id="gameStatus"></p>
+        </div>
+    </div>
+    <script>
+        let board = ['', '', '', '', '', '', '', '', ''];
+        let gameOver = false;
+        
+        function makeMove(index) {
+            if (!gameOver && board[index] === '') {
+                board[index] = 'X';
+                document.getElementsByClassName('cell')[index].innerText = 'X';
+                if (checkWin('X')) {
+                    document.getElementById('gameStatus').innerText = `You Win!`;
+                    gameOver = true;
+                    return;
+                }
+                if (!board.includes('')) {
+                    document.getElementById('gameStatus').innerText = `It's a Draw!`;
+                    gameOver = true;
+                    return;
+                }
+                setTimeout(computerMove, 500);
+            }
+        }
+        
+        function computerMove() {
+            let emptyCells = board.map((cell, index) => cell === '' ? index : null).filter(val => val !== null);
+            if (emptyCells.length === 0 || gameOver) return;
+            let randomIndex = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+            board[randomIndex] = 'O';
+            document.getElementsByClassName('cell')[randomIndex].innerText = 'O';
+            if (checkWin('O')) {
+                document.getElementById('gameStatus').innerText = `Computer Wins!`;
+                gameOver = true;
+            }
+        }
+        
+        function checkWin(player) {
+            const winPatterns = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 4, 8], [2, 4, 6]
+            ];
+            return winPatterns.some(pattern => 
+                board[pattern[0]] === player &&
+                board[pattern[1]] === player &&
+                board[pattern[2]] === player
+            );
+        }
+    </script>
+</body>
+</html>

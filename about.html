@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #121212;
+            color: #fff;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #1e1e1e;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            color: #ff4757;
+        }
+        .menu {
+            display: flex;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+        .logo img{
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .footer {
+            background: #1e1e1e;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="photo/logo.jpg" alt=""></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="find.html">Find Courses</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>About XPART CRACKER</h1>
+        <p>XPART CRACKER is dedicated to providing top-tier software solutions, cybersecurity insights, and tech innovations. We strive to empower users with cutting-edge tools and knowledge to navigate the digital world securely.</p>
+        <p>🚀 Innovation at its best – We bring the latest in technology and software development.</p>
+        <p>🛡️ Cybersecurity experts – Protecting your digital presence with top-notch security insights.</p>
+        <p>📢 Community-driven – We believe in knowledge sharing and user empowerment.</p>
+        <p>🔧 Tools & Utilities – Providing high-quality tools to enhance productivity.</p>
+        <p>🎯 Our Mission – To simplify complex technology for everyone and ensure a safer digital world.</p>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2025 XPART CRACKER. All rights reserved.</p>
+    </footer>
+</body>
+</html>

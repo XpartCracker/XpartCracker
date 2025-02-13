@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+    <header>
+        <img src="photo/logo.jpg" alt="XPART CRACKER Logo">
+        <h1>XPART CRACKER</h1>
+        <button class="menu-btn" onclick="toggleNav()">☰</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="courses.html">Courses</a>
+            </li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="find.html">Find Courses</a></li>
+            <li><a href="error.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleNav()">×</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="find.html">Find Courses</a></li>
+            <li><a href="error.html">Login</a></li>
+        </ul>
+    </div>
+    <div class="add">
+        <!-- autocad section  -->
+         <div class="tagline">
+            <h2>😍Auto Cad Courses😍</h2>
+        </div>
+        <section id="autocad">
+            <div class="shape">
+                <img src="photo/ss.png" alt="Product Image">
+                <h5>🚀 Master AutoCAD - 2D & 3D CAD Design with Ease! 🎨💡
+                    😍Price💵 : 400 taka only.😍</h5>
+                <button><a href="https://t.me/xpartcracker/3">BUY NOW</a></button>
+            </div>
+            
+        </section>
+        <!-- Artificial intelligence (AI)  -->
+        <div class="tagline">
+            <h2>😍Artificial intelligence (AI) 😍</h2>
+        </div>
+        <section id="AI">
+            <div class="shape">
+                <img src="photo/AI.png" alt="Product Image">
+                <h5>🚀 Master AI & Transform Your Future! 🤖💡 Enroll Now for Just FREE! 🔥</h5>
+                <button><a href="https://t.me/xpartcracker/4">BUY NOW</a></button>
+            </div>
+        </section>
+        <!-- Microsoft Courses  -->
+        <div class="tagline">
+            <h2>😍Microsoft Courses 😍</h2>
+        </div>
+        <section id="microsoft">
+            <div class="shape">
+                <img src="photo/micro.jpeg" alt="Product Image">
+                <h5>🚀 Microsoft 365 Mastery: Excel, Word & PowerPoint 🎯 😍Price💵:200 Taka only.😍</h5>
+                <button><a href="https://t.me/xpartcracker/5">BUY NOW</a></button>
+            </div>
+        </section>
+   
+        <!-- <div class="shape">
+            <img src="your-image.jpg" alt="Product Image">
+            <h5>Your Tagline Here</h5>
+            <button><a href="">BUY NOW</a></button>
+        </div> -->
+      
+    </div>
+    <!-- footer   -->
+    <footer class="footer">
+        <div class="logo">
+            <img src="photo/logo.jpg" alt="">
+        </div>
+        <div class="slogan">XPART CRACKER</div>
+        <div class="slogan">📌We Crack Everything!📌</div>
+
+        <div class="links">
+            <div>
+                <a href="error.html">WEEBLY THEMES</a>
+                <a href="error.html">PRE-SALE FAQS</a>
+                <a href="error.html">SUBMIT A TICKET</a>
+            </div>
+            <div>
+                <a href="error.html">SERVICES</a>
+                <a href="error.html">THEME TWEAK</a>
+            </div>
+            <div>
+                <a href="error.html">SHOWCASE</a>
+                <a href="error.html">WIDGETKIT</a>
+                <a href="error.html">SUPPORT</a>
+            </div>
+            <div>
+                <a href="error.html">ABOUT US</a>
+                <a href="error.html">CONTACT US</a>
+                <a href="error.html">AFFILIATES</a>
+                <a href="error.html">RESOURCES</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a> <!-- Facebook -->
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <!-- Twitter -->
+            <a href="#"><i class="fa-brands fa-telegram"></i></a> <!-- RSS -->
+            <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a> <!-- Google Plus -->
+            <a href="#"><i class="fa-solid fa-earth-americas"></i></a> <!-- Flickr -->
+        </div>
+        <div class="copyright">&copy;Copyright. All rights reserved.</div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show-nav');
+        }
+    </script>
+</body>
+</html>
